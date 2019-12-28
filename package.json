@@ -1,14 +1,12 @@
 {
-  "name": "rtk-convert-todos-example",
-  "version": "0.1.0",
-  "private": true,
+  "name": "rtk-convert-todos-example-h4r-conversion",
+  "version": "0.2.0",
+  "private": false,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.0.4",
+    "hooks-for-redux": "^1.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-redux": "^7.1.0",
-    "react-scripts": "^3.2.0",
-    "redux": "^4.0.4"
+    "react-scripts": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +32,7 @@
   },
   "devDependencies": {
     "prettier": "^1.18.2"
-  }
+  },
+  "keywords": [],
+  "description": "Hooks-for-redux (h4r) - Conversion from React-Toolkit Todo"
 }
