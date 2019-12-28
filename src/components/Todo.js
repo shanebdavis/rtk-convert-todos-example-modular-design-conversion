@@ -6,3 +6,4 @@ export const Todo = ({ id, text, completed }) =>
     onClick={() => toggleTodo(id)}
     style={{textDecoration: completed ? 'line-through' : 'none'}}
   >{text}</li>
+  
