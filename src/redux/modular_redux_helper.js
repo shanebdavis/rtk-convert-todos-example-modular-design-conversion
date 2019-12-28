@@ -8,7 +8,7 @@ export const useRedux = (storeKey, initialState, reducers, store = _store) => {
 
   const useSlice = () => {
     const [state, setState] = useState(() => getState());
-    useLayoutEffect(() => subscribe((v) => setState(() => v)), [setState]);
+    useLayoutEffect(() => subscribe(v => setState(() => v)), [setState]);
     return state;
   };
 
