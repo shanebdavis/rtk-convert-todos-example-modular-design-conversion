@@ -3,7 +3,6 @@
   "version": "0.2.0",
   "private": false,
   "dependencies": {
-    "hooks-for-redux": "^1.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "^3.3.0"
