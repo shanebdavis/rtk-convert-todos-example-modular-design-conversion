@@ -1,4 +1,4 @@
-import { useRedux } from 'hooks-for-redux'
+import { useRedux } from './modular_redux_helper'
 
 export const filterTypes = {
   all: () => true,

@@ -7,6 +7,7 @@ export const Footer = () => {
     <span>Show: </span>
     {Object.keys(filterTypes).map((name) =>
       <button
+        key={name}
         onClick={() => setFilter(name)}
         disabled={currentFilter === filterTypes[name]}
         style={{marginLeft: '4px'}}
