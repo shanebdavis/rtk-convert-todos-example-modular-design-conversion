@@ -1,7 +1,15 @@
 import { useState, useLayoutEffect } from "react"
-import { store as _store } from './store'
+import { createStore, combineReducers } from 'redux'
 
-export const useRedux = (storeKey, initialState, reducers, store = _store) => {
+let reducers = {}
+export const store = createStore(s => s)
+
+store.injectReducer = (key, reducer) => {
+  reducers[key] = reducer
+  store.replaceReducer(combineReducers(reducers))
+}
+
+export const useRedux = (storeKey, initialState, reducers) => {
   store.injectReducer(storeKey, (state = initialState, { type, payload }) =>
     reducers[type] ? reducers[type](state, payload) : state
   );
@@ -25,9 +33,5 @@ export const useRedux = (storeKey, initialState, reducers, store = _store) => {
     );
   };
 
-  return [
-    useSlice,
-    dispatchers,
-    { getState, subscribe }
-  ];
+  return [useSlice, dispatchers, { getState, subscribe }];
 }

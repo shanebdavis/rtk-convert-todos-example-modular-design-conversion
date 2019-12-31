@@ -1,4 +1,4 @@
-import { useRedux } from './modular_redux_helper'
+import { useRedux } from './modularRedux'
 
 let nextTodoId = 0
 
